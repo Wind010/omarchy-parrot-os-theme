@@ -1,0 +1,59 @@
+# ParrotOS Theme for Alacritty
+# A dark theme with black background and ParrotOS green foreground
+# https://github.com/alacritty/alacritty
+
+[colors.primary]
+background = "#000000"
+foreground = "#00ff41"
+
+[colors.cursor]
+text = "#000000"
+cursor = "#00ff41"
+
+[colors.vi_mode_cursor]
+text = "CellBackground"
+cursor = "CellForeground"
+
+[colors.selection]
+text = "CellForeground"
+background = "#004d00"
+
+[colors.normal]
+black = "#000000"
+red = "#ff0000"
+green = "#00ff41"
+yellow = "#ffff00"
+blue = "#0066ff"
+magenta = "#ff00ff"
+cyan = "#00ffff"
+white = "#cccccc"
+
+[colors.bright]
+black = "#666666"
+red = "#ff6666"
+green = "#66ff66"
+yellow = "#ffff99"
+blue = "#6699ff"
+magenta = "#ff66ff"
+cyan = "#66ffff"
+white = "#ffffff"
+
+[colors.search.matches]
+foreground = "#000000"
+background = "#00ff41"
+
+[colors.search.focused_match]
+foreground = "#000000"
+background = "#00cc00"
+
+[colors.footer_bar]
+background = "#000000"
+foreground = "#00ff41"
+
+[colors.hints.start]
+foreground = "#000000"
+background = "#00ff41"
+
+[colors.hints.end]
+foreground = "#00ff41"
+background = "#000000"

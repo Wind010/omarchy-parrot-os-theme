@@ -1,0 +1,546 @@
+/* ParrotOS Theme for Steam Client */
+/* Dark theme with black background and ParrotOS green accents */
+
+/* Root styling */
+:root {
+  --primary-bg: #000000;
+  --secondary-bg: #1a1a1a;
+  --tertiary-bg: #0a0a0a;
+  --primary-fg: #00ff41;
+  --secondary-fg: #888888;
+  --accent: #00ff41;
+  --accent-dark: #00cc00;
+  --accent-light: #66ff66;
+  --border: #333333;
+  --error: #ff0000;
+  --warning: #ffff00;
+  --info: #0066ff;
+  --success: #00ff41;
+}
+
+/* Main window */
+QWidget {
+  background-color: var(--primary-bg);
+  color: var(--primary-fg);
+}
+
+QMainWindow,
+QDialog {
+  background-color: var(--primary-bg);
+  color: var(--primary-fg);
+}
+
+/* Labels and text */
+QLabel {
+  color: var(--primary-fg);
+}
+
+QLabel[type="secondary"] {
+  color: var(--secondary-fg);
+}
+
+/* Buttons */
+QPushButton {
+  background-color: var(--secondary-bg);
+  color: var(--primary-fg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 5px 15px;
+  font-weight: bold;
+}
+
+QPushButton:hover {
+  background-color: var(--accent-dark);
+  border-color: var(--accent);
+  color: var(--primary-bg);
+}
+
+QPushButton:pressed {
+  background-color: var(--accent);
+  color: var(--primary-bg);
+  border-color: var(--accent);
+}
+
+QPushButton:disabled {
+  color: var(--secondary-fg);
+  border-color: var(--border);
+  background-color: var(--tertiary-bg);
+}
+
+/* Line edits (text input) */
+QLineEdit {
+  background-color: var(--secondary-bg);
+  color: var(--primary-fg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 5px 8px;
+  selection-background-color: var(--accent-dark);
+}
+
+QLineEdit:focus {
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+}
+
+QLineEdit::placeholder {
+  color: var(--secondary-fg);
+}
+
+/* Text edits */
+QPlainTextEdit,
+QTextEdit {
+  background-color: var(--secondary-bg);
+  color: var(--primary-fg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 8px;
+}
+
+QPlainTextEdit:focus,
+QTextEdit:focus {
+  border: 1px solid var(--accent);
+}
+
+/* Combobox */
+QComboBox {
+  background-color: var(--secondary-bg);
+  color: var(--primary-fg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 5px 8px;
+}
+
+QComboBox:on {
+  background-color: var(--tertiary-bg);
+  border: 1px solid var(--accent);
+}
+
+QComboBox::drop-down {
+  background-color: var(--secondary-bg);
+  color: var(--primary-fg);
+  border-left: 1px solid var(--border);
+}
+
+QComboBox::down-arrow {
+  image: none;
+  color: var(--primary-fg);
+}
+
+/* Spinbox */
+QSpinBox,
+QDoubleSpinBox {
+  background-color: var(--secondary-bg);
+  color: var(--primary-fg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 5px 8px;
+}
+
+QSpinBox::up-button,
+QDoubleSpinBox::up-button {
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--border);
+}
+
+QSpinBox::down-button,
+QDoubleSpinBox::down-button {
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--border);
+}
+
+/* Sliders */
+QSlider::groove:horizontal {
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--border);
+  height: 8px;
+  border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+  background-color: var(--accent);
+  border: 1px solid var(--accent-dark);
+  width: 16px;
+  margin: -4px 0;
+  border-radius: 8px;
+}
+
+QSlider::handle:horizontal:hover {
+  background-color: var(--accent-light);
+  border: 1px solid var(--accent);
+}
+
+/* Scrollbars */
+QScrollBar:vertical {
+  background-color: var(--primary-bg);
+  width: 12px;
+  border: none;
+}
+
+QScrollBar::handle:vertical {
+  background-color: var(--accent);
+  border-radius: 6px;
+  min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+  background-color: var(--accent-light);
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+  background-color: var(--secondary-bg);
+  height: 0px;
+}
+
+QScrollBar:horizontal {
+  background-color: var(--primary-bg);
+  height: 12px;
+  border: none;
+}
+
+QScrollBar::handle:horizontal {
+  background-color: var(--accent);
+  border-radius: 6px;
+  min-width: 20px;
+}
+
+QScrollBar::handle:horizontal:hover {
+  background-color: var(--accent-light);
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+  background-color: var(--secondary-bg);
+  width: 0px;
+}
+
+/* Checkboxes */
+QCheckBox {
+  color: var(--primary-fg);
+  spacing: 5px;
+}
+
+QCheckBox::indicator {
+  width: 16px;
+  height: 16px;
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+QCheckBox::indicator:checked {
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+  image: none;
+}
+
+QCheckBox::indicator:hover {
+  border: 1px solid var(--accent);
+}
+
+/* Radio buttons */
+QRadioButton {
+  color: var(--primary-fg);
+  spacing: 5px;
+}
+
+QRadioButton::indicator {
+  width: 16px;
+  height: 16px;
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+QRadioButton::indicator:checked {
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+/* Menu bar */
+QMenuBar {
+  background-color: var(--secondary-bg);
+  color: var(--primary-fg);
+  border-bottom: 1px solid var(--border);
+}
+
+QMenuBar::item:selected {
+  background-color: var(--accent-dark);
+  color: var(--primary-bg);
+}
+
+QMenuBar::item:pressed {
+  background-color: var(--accent);
+  color: var(--primary-bg);
+}
+
+/* Menus */
+QMenu {
+  background-color: var(--secondary-bg);
+  color: var(--primary-fg);
+  border: 1px solid var(--border);
+}
+
+QMenu::item:selected {
+  background-color: var(--accent-dark);
+  color: var(--primary-bg);
+}
+
+QMenu::separator {
+  background-color: var(--border);
+  height: 1px;
+  margin: 5px 0;
+}
+
+/* Tab widget */
+QTabBar::tab {
+  background-color: var(--tertiary-bg);
+  color: var(--secondary-fg);
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+QTabBar::tab:selected {
+  background-color: var(--secondary-bg);
+  color: var(--primary-fg);
+  border: 1px solid var(--border);
+  border-bottom: 2px solid var(--accent);
+}
+
+QTabBar::tab:hover:!selected {
+  background-color: var(--secondary-bg);
+  color: var(--primary-fg);
+}
+
+QTabWidget::pane {
+  border: 1px solid var(--border);
+}
+
+/* Tooltips */
+QToolTip {
+  background-color: var(--secondary-bg);
+  color: var(--primary-fg);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+/* Groupbox */
+QGroupBox {
+  color: var(--primary-fg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 12px;
+  padding-top: 12px;
+}
+
+QGroupBox::title {
+  subcontrol-origin: margin;
+  left: 10px;
+  padding: 0 3px 0 3px;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Progress bar */
+QProgressBar {
+  background-color: var(--secondary-bg);
+  color: var(--primary-fg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px;
+}
+
+QProgressBar::chunk {
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+
+/* Splitter */
+QSplitter::handle {
+  background-color: var(--border);
+}
+
+QSplitter::handle:hover {
+  background-color: var(--accent);
+}
+
+/* Header view (table/tree headers) */
+QHeaderView::section {
+  background-color: var(--secondary-bg);
+  color: var(--primary-fg);
+  padding: 5px;
+  border: 1px solid var(--border);
+  font-weight: bold;
+}
+
+/* Table widget */
+QTableWidget,
+QTableView {
+  background-color: var(--primary-bg);
+  color: var(--primary-fg);
+  gridline-color: var(--border);
+  border: 1px solid var(--border);
+}
+
+QTableWidget::item:selected,
+QTableView::item:selected {
+  background-color: var(--accent-dark);
+  color: var(--primary-bg);
+}
+
+/* Tree widget */
+QTreeWidget,
+QTreeView {
+  background-color: var(--primary-bg);
+  color: var(--primary-fg);
+  border: 1px solid var(--border);
+}
+
+QTreeWidget::item:selected,
+QTreeView::item:selected {
+  background-color: var(--accent-dark);
+  color: var(--primary-bg);
+}
+
+QTreeWidget::branch:open:has-children:!has-siblings,
+QTreeWidget::branch:open:has-children:has-siblings {
+  image: none;
+  color: var(--primary-fg);
+}
+
+/* List widget */
+QListWidget,
+QListView {
+  background-color: var(--primary-bg);
+  color: var(--primary-fg);
+  border: 1px solid var(--border);
+}
+
+QListWidget::item:selected,
+QListView::item:selected {
+  background-color: var(--accent-dark);
+  color: var(--primary-bg);
+}
+
+QListWidget::item:hover:!selected,
+QListView::item:hover:!selected {
+  background-color: var(--accent-dark);
+  color: var(--accent-light);
+}
+
+/* Dock widget */
+QDockWidget {
+  color: var(--primary-fg);
+}
+
+QDockWidget::title {
+  background-color: var(--secondary-bg);
+  color: var(--primary-fg);
+  border: 1px solid var(--border);
+  padding: 4px;
+  font-weight: bold;
+}
+
+/* Status bar */
+QStatusBar {
+  background-color: var(--secondary-bg);
+  color: var(--primary-fg);
+  border-top: 1px solid var(--border);
+}
+
+QStatusBar::item {
+  border: none;
+}
+
+/* Dialog buttons */
+QDialogButtonBox {
+  button-layout: 2;
+}
+
+/* Frame */
+QFrame {
+  background-color: var(--primary-bg);
+  color: var(--primary-fg);
+}
+
+/* STEAM SPECIFIC STYLING */
+
+/* Steam Store */
+.StoreHeader,
+.StorePage {
+  background-color: var(--primary-bg);
+  color: var(--primary-fg);
+}
+
+/* Game tiles */
+.GameTile,
+.GameCard {
+  border: 1px solid var(--border);
+  background-color: var(--secondary-bg);
+  border-radius: 4px;
+}
+
+.GameTile:hover,
+.GameCard:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 10px var(--accent) 40%;
+}
+
+/* Friends list */
+.FriendsList,
+.ChatWindow {
+  background-color: var(--primary-bg);
+  color: var(--primary-fg);
+}
+
+.FriendItem:selected {
+  background-color: var(--accent-dark);
+  color: var(--primary-bg);
+}
+
+/* Buttons in library */
+.LibraryButton,
+.ShopButton {
+  background-color: var(--accent);
+  color: var(--primary-bg);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: bold;
+}
+
+.LibraryButton:hover,
+.ShopButton:hover {
+  background-color: var(--accent-light);
+}
+
+.LibraryButton:active,
+.ShopButton:active {
+  background-color: var(--accent-dark);
+}
+
+/* Console/Community */
+.ConsoleArea,
+.CommunityPage {
+  background-color: var(--primary-bg);
+  color: var(--primary-fg);
+}
+
+/* Scrollbars in Steam specific areas */
+.SteamContent QScrollBar:vertical {
+  background-color: var(--primary-bg);
+  width: 12px;
+}
+
+.SteamContent QScrollBar::handle:vertical {
+  background-color: var(--accent);
+  border-radius: 6px;
+}
+
+.SteamContent QScrollBar::handle:vertical:hover {
+  background-color: var(--accent-light);
+}
